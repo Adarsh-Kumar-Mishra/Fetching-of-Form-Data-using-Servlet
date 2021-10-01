@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Submit form and fetch data of form using servlet</title>
+<style type="text/css">
+ .container{
+    width: 40%;
+    border:1px solid black;
+    margin:auto;
+    padding:20px;
+    font-size:15px;
+ }
+    
+</style>
+</head>
+<body>
+<div class = "container">
+  <h1>My Form</h1>
+  <form action="RegisterServlet" method="post">
+  <table>
+  <tr>
+  <td>Enter your name plz:   </td>
+  <td><input type="text" name="user_name" placeholder ="Enter name"/></td>
+  
+  </tr>
+  <tr>
+  <td>Enter your password plz:   </td>
+  <td><input type="password" name="user_password" placeholder ="Enter password"/></td>
+  
+  </tr>
+  <tr>
+  <td>Enter your gender plz:   </td>
+  <td><input type="radio" name="user_gender" value="male" />Male &nbsp; &nbsp; <input type="radio" name="user_gender" value="female" /> Female</td>
+  </tr>
+  <tr>
+  <td></td>
+  <td>
+   <button type ="submit">Register</button>
+    <button type ="reset">Reset</button>
+  </td>
+  </tr>
+  </table>
+  
+  </form>
+</div>
+
+</body>
+</html>
