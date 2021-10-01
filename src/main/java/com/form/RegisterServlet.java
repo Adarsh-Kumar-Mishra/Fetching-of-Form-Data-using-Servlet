@@ -3,6 +3,7 @@ package com.form;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -18,9 +19,13 @@ public class RegisterServlet extends HttpServlet {
     	      if(name.length()!=0) {
     	    	  out.println("<h2> Name :"+name+"<h2>");
     	    	  out.println("<h2> Password :"+password+"<h2>");
-    	    	  
+    	    	  ///jdbc
+    	    	  RequestDispatcher rd = req.getRequestDispatcher("success");
+    	    	  rd.forward(req, resp);
     	      }else {
     	    	  out.print("You have not filled the form yet");
+    	    	  RequestDispatcher rd = req.getRequestDispatcher("index.html");
+    	    	  rd.include(req, resp);
     	      }
      }
 }

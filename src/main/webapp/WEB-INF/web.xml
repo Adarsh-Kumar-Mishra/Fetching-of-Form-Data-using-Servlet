@@ -2,6 +2,7 @@
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
   <display-name>FormUsingServlet</display-name>
   <welcome-file-list>
+    <welcome-file>home.html</welcome-file>
     <welcome-file>index.html</welcome-file>
     <welcome-file>index.htm</welcome-file>
     <welcome-file>index.jsp</welcome-file>
@@ -14,9 +15,17 @@
   <servlet-name>register</servlet-name>
   <servlet-class>com.form.RegisterServlet</servlet-class>
   </servlet>
+  <servlet>
+  <servlet-name>success</servlet-name>
+  <servlet-class>com.form.SuccessServlet</servlet-class>
+  </servlet>
   <servlet-mapping>
   <servlet-name>register</servlet-name>
   <url-pattern>/RegisterServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  <servlet-name>success</servlet-name>
+  <url-pattern>/success</url-pattern>
   </servlet-mapping>
   
   
