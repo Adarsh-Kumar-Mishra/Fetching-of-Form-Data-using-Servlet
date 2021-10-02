@@ -20,7 +20,7 @@ public class RegisterServlet extends HttpServlet {
     	    	  
     	    	  ///jdbc
     	    	  RequestDispatcher rd = req.getRequestDispatcher("success");
-    	    	  rd.forward(req, resp);
+    	    	  rd.include(req, resp);
     	    	  out.println("<h2> Name :"+name+"<h2>");
     	    	  out.println("<h2> Password :"+password+"<h2>");
     	      }else {
