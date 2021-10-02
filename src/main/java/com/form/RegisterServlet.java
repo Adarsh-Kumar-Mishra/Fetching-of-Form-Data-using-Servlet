@@ -17,11 +17,12 @@ public class RegisterServlet extends HttpServlet {
     	      String name = req.getParameter("user_name");
     	      String password = req.getParameter("user_password");
     	      if(name.length()!=0) {
-    	    	  out.println("<h2> Name :"+name+"<h2>");
-    	    	  out.println("<h2> Password :"+password+"<h2>");
+    	    	  
     	    	  ///jdbc
     	    	  RequestDispatcher rd = req.getRequestDispatcher("success");
     	    	  rd.forward(req, resp);
+    	    	  out.println("<h2> Name :"+name+"<h2>");
+    	    	  out.println("<h2> Password :"+password+"<h2>");
     	      }else {
     	    	  out.print("You have not filled the form yet");
     	    	  RequestDispatcher rd = req.getRequestDispatcher("index.html");
